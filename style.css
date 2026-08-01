@@ -1,0 +1,170 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#fff9c4,#ffe082,#ffd54f);
+min-height:100vh;
+color:#333;
+overflow-x:hidden;
+padding:20px;
+}
+
+.fondoNumeros{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+overflow:hidden;
+}
+
+.fondoNumeros span{
+position:absolute;
+font-size:40px;
+font-weight:bold;
+color:rgba(255,193,7,.15);
+animation:flotar 15s linear infinite;
+}
+
+.fondoNumeros span:nth-child(1){left:5%;top:90%;}
+.fondoNumeros span:nth-child(2){left:15%;top:80%;}
+.fondoNumeros span:nth-child(3){left:25%;top:95%;}
+.fondoNumeros span:nth-child(4){left:35%;top:85%;}
+.fondoNumeros span:nth-child(5){left:45%;top:90%;}
+.fondoNumeros span:nth-child(6){left:55%;top:80%;}
+.fondoNumeros span:nth-child(7){left:65%;top:95%;}
+.fondoNumeros span:nth-child(8){left:75%;top:85%;}
+.fondoNumeros span:nth-child(9){left:85%;top:90%;}
+.fondoNumeros span:nth-child(10){left:95%;top:80%;}
+
+@keyframes flotar{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-120vh);
+}
+}
+
+.pantalla{
+display:none;
+max-width:900px;
+margin:auto;
+}
+
+.activa{
+display:block;
+}
+
+h1{
+text-align:center;
+font-size:3rem;
+color:#ff8f00;
+margin-bottom:20px;
+text-shadow:2px 2px 5px rgba(0,0,0,.2);
+}
+
+h2{
+color:#f57f17;
+margin:20px 0 10px;
+}
+
+.introduccion{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+margin-bottom:20px;
+}
+
+p{
+line-height:1.6;
+}
+
+input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+margin:10px 0;
+font-size:16px;
+}
+
+button{
+background:#ffca28;
+border:none;
+padding:15px 25px;
+border-radius:15px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin:5px;
+transition:.3s;
+}
+
+button:hover{
+background:#ffc107;
+transform:scale(1.05);
+}
+
+#rankingBtn{
+position:fixed;
+top:15px;
+right:15px;
+width:60px;
+height:60px;
+border-radius:50%;
+font-size:28px;
+}
+
+.barra{
+width:100%;
+height:20px;
+background:#fff3cd;
+border-radius:20px;
+overflow:hidden;
+margin:20px 0;
+}
+
+#progreso{
+height:100%;
+width:0%;
+background:#ffc107;
+transition:.4s;
+}
+
+#preguntaCaja{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+margin-top:20px;
+}
+
+table{
+width:100%;
+background:white;
+border-radius:15px;
+overflow:hidden;
+margin-top:20px;
+}
+
+th{
+background:#ffc107;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#fff8e1;
+}

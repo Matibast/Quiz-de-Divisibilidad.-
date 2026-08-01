@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz MCD y MCM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="fondoNumeros">
+<span>2</span>
+<span>3</span>
+<span>5</span>
+<span>7</span>
+<span>11</span>
+<span>13</span>
+<span>17</span>
+<span>19</span>
+<span>23</span>
+<span>29</span>
+</div>
+
+<button id="rankingBtn" onclick="mostrarRanking()">
+🏆
+</button>
+
+<section id="inicio" class="pantalla activa">
+
+<h1>Quiz de Divisibilidad</h1>
+
+<div class="introduccion">
+
+<h2>Máximo Común Divisor</h2>
+<p>
+El MCD es el número más grande que divide exactamente
+a dos o más números.
+</p>
+
+<h2>Mínimo Común Múltiplo</h2>
+<p>
+El mcm es el menor múltiplo común de dos o más números.
+</p>
+
+<h2>Relación entre MCD y mcm</h2>
+<p>
+MCD(a,b) × mcm(a,b) = a × b
+</p>
+
+<h2>Números Primos</h2>
+<p>
+Tienen exactamente dos divisores.
+</p>
+
+<h2>Números Compuestos</h2>
+<p>
+Poseen más de dos divisores.
+</p>
+
+<h2>Números Coprimos</h2>
+<p>
+Su único divisor común es 1.
+</p>
+
+<h2>Descomposición en Factores Primos</h2>
+<p>
+Todo número compuesto puede escribirse
+como multiplicación de números primos.
+</p>
+
+</div>
+
+<input
+id="nombre"
+placeholder="Escribe tu nombre">
+
+<button onclick="iniciarJuego()">
+Comenzar
+</button>
+
+</section>
+
+<section id="quiz" class="pantalla">
+
+<div id="info">
+
+<p id="nivelTexto">
+Nivel Fácil
+</p>
+
+<p>
+Puntos:
+<span id="puntos">
+0
+</span>
+</p>
+
+</div>
+
+<div class="barra">
+<div id="progreso"></div>
+</div>
+
+<p id="contador">
+Pregunta 1/16
+</p>
+
+<div id="preguntaCaja">
+
+<h2 id="pregunta">
+Pregunta
+</h2>
+
+<p id="avisoPotencia"></p>
+
+<div id="respuestas"></div>
+
+</div>
+
+</section>
+
+<section id="resultado" class="pantalla">
+
+<h1>🎉 Partida Finalizada</h1>
+
+<p id="nombreFinal"></p>
+
+<p id="puntajeFinal"></p>
+
+<p id="aciertosFinal"></p>
+
+<p id="erroresFinal"></p>
+
+<p id="precisionFinal"></p>
+
+<button onclick="mostrarRanking()">
+Ver Ranking
+</button>
+
+<button onclick="volverInicio()">
+Volver
+</button>
+
+</section>
+
+<section id="ranking" class="pantalla">
+
+<h1>🏆 Ranking</h1>
+
+<table>
+
+<thead>
+<tr>
+<th>#</th>
+<th>Jugador</th>
+<th>Puntos</th>
+</tr>
+</thead>
+
+<tbody id="tablaRanking">
+</tbody>
+
+</table>
+
+<button onclick="volverInicio()">
+Volver
+</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
